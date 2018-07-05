@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<title>BookStore</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">Ice-n-Fire</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home" ng-class="{'filter-menu-active': page === '/'}" > Home</a></li>
+          <li><a href="#books" ng-class="{'filter-menu-active': page === '/books'}"> Books</a></li>
+          <li><a href="#characters" ng-class="{'filter-menu-active': page === '/characters'}"> Characters</a></li>
+          <li><a href="#houses" ng-class="{'filter-menu-active': page === '/houses'}"> Houses</a></li>
+          </ul>
+
+        </div>
+
+
+    </nav>
+    
+    <div ng-view ></div>
+
+
+  </div>
+
+
+	
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="service.js"></script>
+  <script type="text/javascript" src="controller/book.js"></script>
+  <script type="text/javascript" src="controller/character.js"></script>
+  <script type="text/javascript" src="controller/home.js"></script>
+  <script type="text/javascript" src="controller/house.js"></script>
+
+
+
+</body>
+  
+</html>

@@ -1,0 +1,11 @@
+<div class="container" ng-controller='BookController'>
+    <h1>Books</h1>
+
+    <div ng-repeat="book in books | filter: orderBy">
+        <ul>
+            <li>
+                {{ book.name }} 
+            </li>
+        </ul> 
+    </div>
+</div>

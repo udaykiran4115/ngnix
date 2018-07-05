@@ -1,0 +1,27 @@
+<div class="container" ng-controller='CharacterController'>
+    <h1>Characters</h1>
+
+    <h3>Character Search</h3>
+    <input type="text" class="form-control" ng-model="model.search">
+
+    <div ng-hide="model.search">
+      Enter the search criteria above.
+    </div>
+
+    <div ng-show="model.search" ng-repeat="names in character_Names | filter:model.search">
+      <span >{{names}}</span>
+    </div>
+
+    <h3>whole characters</h3>
+    <div class="row">
+        <div class="col-md-2" ng-repeat="names in character_Names">
+            <ul>
+                <li>
+                    {{names }} 
+                </li>
+            </ul> 
+            
+        </div>
+    </div>
+    
+</div>
